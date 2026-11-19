@@ -1,10 +1,65 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Politique de confidentialité — ELLE PARLE</title><link rel="stylesheet" href="style.css"></head><body><main class="wrap"><p><a href="index.html">← Accueil ELLE PARLE</a></p><p class="eyebrow">Document à valider par le propriétaire</p><h1>Politique de confidentialité</h1><p><strong>Version de travail — à vérifier avec les pratiques effectivement déployées avant toute diffusion définitive.</strong></p>
-<p>Cette politique décrit les données prévues pour ELLE PARLE, application communautaire exploitée par MELOBAB en Côte d’Ivoire. Contact confidentialité : <a href="mailto:elleparle8@gmail.com">elleparle8@gmail.com</a>.</p>
-<h2>Données utilisées</h2><ul><li>Compte : pseudonyme, mot de passe traité par Supabase Auth et identifiant technique interne non distribué. Aucun e-mail ni téléphone n’est demandé comme identifiant aux membres.</li><li>Inscription : déclaration d’âge adulte, ville facultative, réponses facultatives sur situation familiale et enfants, et preuve des versions de Conditions et Politique acceptées. La déclaration d’âge sert au contrôle 18+; elle n’est pas enregistrée comme champ du profil selon le code actuel.</li><li>Activité : publications et choix d’anonymat, catégorie, commentaires, réactions, favoris, comptes bloqués, alertes et signalements.</li><li>Sécurité : informations techniques de requête nécessaires à la prévention des abus. Le code prévoit un condensat HMAC d’adresse IP pour limiter les tentatives d’inscription; les journaux du prestataire et leur durée de conservation restent à vérifier.</li></ul>
-<h2>Publications anonymes</h2><p>Le pseudonyme est masqué aux autres membres pour une publication anonyme. Le lien avec le compte est stocké séparément dans la base et n’est pas accordé aux membres ordinaires. Les prestataires techniques traitant la base et les personnes habilitées pour la sécurité ou la modération peuvent accéder aux éléments nécessaires. Ne publie pas d’informations qui permettraient de t’identifier dans le texte lui-même.</p>
-<h2>Pourquoi ces données sont utilisées</h2><p>Créer et sécuriser les comptes, fournir le fil communautaire et ses fonctions, enregistrer les choix de confidentialité, gérer les signalements et les blocages, prévenir les abus et répondre aux demandes du support.</p>
-<h2>Prestataires et hébergement</h2><p>Le backend utilise Supabase (PostgreSQL et services d’authentification/Edge Functions). La configuration de développement indique la région eu-west-3 (Paris); la localisation effective et les éventuels transferts liés aux prestataires doivent être reconfirmés dans le tableau de bord avant lancement. Le site public est prévu sur GitHub Pages; GitHub indique que les adresses IP des visiteurs sont enregistrées pour la sécurité. L’application ne prévoit pas de publicité ni de partage commercial des données. Cette déclaration devra être vérifiée pour chaque SDK et service réellement intégré.</p>
-<h2>Accès, sécurité et confidentialité</h2><p>Des politiques d’accès à la base limitent les données visibles par chaque compte. Les données des profils et les informations permettant d’associer une publication anonyme à son auteur sont séparées des espaces publics. Les données transitent par HTTPS. Ces mesures doivent être testées sur le backend de production avant ouverture.</p>
-<h2>Conservation et suppression</h2><p>La durée précise de conservation de chaque catégorie de données reste à définir et valider par le propriétaire; aucune durée légale n’est inventée ici. Une demande de suppression peut être faite dans l’application ou via <a href="suppression.html">la page de suppression</a>. La procédure doit supprimer le compte et les données qui lui sont associées; les éventuelles exceptions et journaux des prestataires doivent être documentés avant lancement.</p>
-<h2>Personnes mineures</h2><p>ELLE PARLE est réservée aux personnes de 18 ans et plus. Les mineurs ne sont pas autorisés à créer un compte.</p>
-<h2>Contacts et réclamations</h2><p>Confidentialité : <a href="mailto:elleparle8@gmail.com">elleparle8@gmail.com</a>. Support : <a href="mailto:elleparle9@gmail.com">elleparle9@gmail.com</a>. Les coordonnées du responsable de traitement, le mécanisme de réclamation auprès de l’autorité compétente et les mentions locales applicables doivent être validés avant publication définitive.</p><p class="note">Brouillon. Pas de délai de conservation chiffré tant que le propriétaire n’a pas validé le calendrier réel.</p></main></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de l’application ELLE PARLE.">
+  <title>Politique de confidentialité — ELLE PARLE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <p><a href="index.html">← Accueil ELLE PARLE</a></p>
+  <p class="eyebrow">ELLE PARLE · Version du 19 novembre 2026</p>
+  <h1>Politique de confidentialité</h1>
+  <p>Cette page explique les données utilisées par l’application communautaire ELLE PARLE et les limites actuelles de leur suppression et de leur conservation.</p>
+
+  <h2>Responsable et contacts</h2>
+  <p>Le responsable indiqué pour ELLE PARLE est <strong>BLAI BOMBADE ARMEL</strong>, sous le nom public de développeur <strong>MELOBAB</strong>, à Abidjan, Cocody, Côte d’Ivoire.</p>
+  <ul>
+    <li>Confidentialité et demandes relatives aux données : <a href="mailto:elleparle8@gmail.com">elleparle8@gmail.com</a></li>
+    <li>Support : <a href="mailto:elleparle9@gmail.com">elleparle9@gmail.com</a></li>
+  </ul>
+
+  <h2>Données utilisées</h2>
+  <p>Selon les fonctions utilisées, l’application traite :</p>
+  <ul>
+    <li><strong>Compte :</strong> pseudonyme, identifiant technique du compte et mot de passe géré par Supabase Auth. L’application ne demande pas d’adresse e-mail ou de numéro de téléphone comme identifiant de connexion.</li>
+    <li><strong>Inscription et préférences :</strong> confirmation que la personne est une femme âgée d’au moins 18 ans, acceptation des conditions et de cette politique, ainsi que les versions acceptées. Cette confirmation est demandée par le parcours d’inscription; l’application ne vérifie pas l’âge ou le genre par pièce justificative.</li>
+    <li><strong>Activité et contenu :</strong> publications, choix de publication anonyme, commentaires, réactions, favoris, blocages, notifications et signalements.</li>
+    <li><strong>Sécurité :</strong> données techniques nécessaires à l’authentification et à la prévention des abus. Le mécanisme d’inscription utilise un condensat HMAC d’adresse IP pour limiter les tentatives; la configuration et la durée des journaux techniques du prestataire ne sont pas maîtrisées intégralement par l’application.</li>
+  </ul>
+
+  <h2>Utilisation du service et visibilité</h2>
+  <p>Ces données servent à créer et sécuriser les comptes, afficher les publications et interactions, appliquer les préférences de blocage, traiter les signalements et répondre aux demandes envoyées au support.</p>
+  <p>Pour une publication marquée anonyme, le pseudonyme n’est pas affiché aux autres membres. Le compte propriétaire reste associé techniquement à la publication afin de permettre la gestion et la sécurité du service. L’anonymat vis-à-vis des autres membres n’est donc pas une garantie d’anonymat absolu envers les personnes habilitées ou les prestataires techniques.</p>
+  <p>Les publications et commentaires sont du contenu utilisateur. Évite d’y inclure des renseignements qui pourraient t’identifier ou des informations sensibles que tu ne souhaites pas partager.</p>
+
+  <h2>Prestataires et hébergement</h2>
+  <p>Le backend de l’application (base de données, authentification et fonctions serveur) est hébergé par Supabase. Le projet actif est configuré dans la région Europe de l’Ouest (Paris). Le site de cette politique est hébergé par GitHub Pages. Les demandes de support et de confidentialité sont reçues par e-mail via Gmail.</p>
+  <p>Ces prestataires traitent certaines données nécessaires à leurs services. Le responsable ne contrôle pas tous leurs journaux techniques ni la durée de conservation de leurs sauvegardes. Consulte leurs politiques respectives pour leurs propres traitements. ELLE PARLE ne propose actuellement ni publicité, ni achat intégré, ni abonnement; cette information ne vaut que pour la version décrite ici.</p>
+
+  <h2>Sécurité</h2>
+  <p>Le service s’appuie notamment sur les contrôles d’accès de la base et les mécanismes d’authentification de Supabase. Les échanges avec les services hébergés utilisent HTTPS. Aucun dispositif ne peut garantir une sécurité absolue; signale toute activité suspecte à l’adresse de support.</p>
+
+  <h2>Conservation</h2>
+  <p>Les règles suivantes distinguent le fonctionnement actuellement prévu des objectifs qui ne sont pas encore automatisés :</p>
+  <ul>
+    <li>Le compte et le profil sont conservés jusqu’à une demande de suppression du compte.</li>
+    <li>Les publications et commentaires restent jusqu’à leur suppression par leur auteur, à la suite d’une demande de suppression du compte ou d’une mesure de modération, selon le cas.</li>
+    <li>Les favoris et blocages restent jusqu’au retrait de l’action ou à la suppression du compte.</li>
+    <li>Pour les signalements clôturés, l’objectif de conservation est de 90 jours après clôture. Une purge automatique à ce délai n’est pas actuellement confirmée comme active. Un dossier peut être conservé plus longtemps si cela est nécessaire pour traiter un incident, un litige ou une obligation applicable.</li>
+    <li>Pour les journaux de sécurité, l’objectif est un plafond de 12 mois, sous réserve des réglages réellement disponibles chez le prestataire; ce plafond n’est pas confirmé comme imposé techniquement à tous les journaux.</li>
+    <li>La durée des sauvegardes dépend du prestataire et n’a pas été vérifiée pour chaque copie. La suppression dans l’application ne permet pas de garantir l’effacement immédiat des sauvegardes ou journaux du prestataire.</li>
+  </ul>
+
+  <h2>Suppression du compte et demandes relatives aux données</h2>
+  <p>Une fonction de suppression est proposée dans l’application. Elle demande la suppression du compte et des données associées, mais une erreur technique ou des données de modération, de sécurité, des journaux ou des sauvegardes peuvent empêcher un effacement immédiat ou complet. Si l’application signale un échec, ou si tu ne peux plus te connecter, utilise la <a href="suppression.html">procédure de suppression accessible sans connexion</a>. Une demande par e-mail est examinée manuellement. La connaissance d’un pseudonyme ne suffit pas à prouver le contrôle du compte; ne transmets jamais ton mot de passe par e-mail.</p>
+
+  <h2>Demandes et réclamations</h2>
+  <p>Pour poser une question ou exercer une demande relative à tes données, écris à <a href="mailto:elleparle8@gmail.com">elleparle8@gmail.com</a>. Le responsable examinera la demande et pourra demander une vérification proportionnée du contrôle du compte avant d’agir. Pour les informations relatives à l’autorité de protection des données en Côte d’Ivoire, consulte le site officiel de l’ARTCI : <a href="https://www.autoritedeprotection.ci/">autoritedeprotection.ci</a>. Cette page ne prétend pas que des formalités auprès de l’autorité ont été accomplies.</p>
+
+  <footer><p>Dernière mise à jour : 19 novembre 2026. Contact confidentialité : <a href="mailto:elleparle8@gmail.com">elleparle8@gmail.com</a>.</p></footer>
+</main>
+</body>
+</html>
